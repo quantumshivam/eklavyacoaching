@@ -132,6 +132,26 @@
                     </div>
                 </div>
             </section>
+            <!-- Testimonials Section -->
+            <section class="py-12 md:py-16 bg-gray-100">
+                <div class="container mx-auto px-4 sm:px-6">
+                    <h2 class="text-3xl font-bold text-center mb-12"><span data-lang-key="testimonials_title">What Our Students Say</span></h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <p class="text-gray-600 italic mb-4">"<span data-lang-key="testimonial_1_text">The teachers at Eklavya are fantastic. They clear every doubt and make learning fun. My grades have improved so much!</span>"</p>
+                            <p class="text-right font-semibold text-indigo-600">- <span data-lang-key="testimonial_1_name">Rohan Sharma</span>, <span data-lang-key="testimonial_1_class">Class 10</span></p>
+                        </div>
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <p class="text-gray-600 italic mb-4">"<span data-lang-key="testimonial_2_text">I used to be scared of Maths, but the personalized attention I received here helped me gain confidence. Thank you!</span>"</p>
+                            <p class="text-right font-semibold text-indigo-600">- <span data-lang-key="testimonial_2_name">Priya Singh</span>, <span data-lang-key="testimonial_2_class">Class 8</span></p>
+                        </div>
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <p class="text-gray-600 italic mb-4">"<span data-lang-key="testimonial_3_text">The study material is excellent and covers everything needed for both board exams and competitive tests. Highly recommended.</span>"</p>
+                            <p class="text-right font-semibold text-indigo-600">- <span data-lang-key="testimonial_3_name">Anjali Verma</span>, <span data-lang-key="testimonial_3_class">Class 12</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <!-- Courses Page -->
@@ -181,19 +201,19 @@
                 <h2 class="text-3xl font-bold text-center mb-12"><span data-lang-key="contact_title">Get In Touch</span></h2>
                 <div class="grid md:grid-cols-2 gap-12 items-start">
                     <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <form id="contact-form">
+                        <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfm-IXBsQNFOJK8F0WkL326mnLQz9-rmuAMx0HECFudDkLbQQ/formResponse" method="POST" target="hidden_iframe">
                             <div id="form-fields">
                                 <div class="mb-4">
                                     <label class="block text-gray-700 font-semibold mb-2" for="name"><span data-lang-key="contact_name">Name</span></label>
-                                    <input class="w-full px-3 py-2 border rounded-lg" type="text" id="name">
+                                    <input class="w-full px-3 py-2 border rounded-lg" type="text" id="name" name="entry.2005620554" required>
                                 </div>
                                 <div class="mb-4">
-                                    <label class="block text-gray-700 font-semibold mb-2" for="email"><span data-lang-key="contact_email">Email</span></label>
-                                    <input class="w-full px-3 py-2 border rounded-lg" type="email" id="email">
+                                    <label class="block text-gray-700 font-semibold mb-2" for="mobile"><span data-lang-key="contact_mobile">Mobile Number</span></label>
+                                    <input class="w-full px-3 py-2 border rounded-lg" type="tel" id="mobile" name="entry.1045781291" required>
                                 </div>
                                 <div class="mb-6">
                                     <label class="block text-gray-700 font-semibold mb-2" for="message"><span data-lang-key="contact_message">Message</span></label>
-                                    <textarea class="w-full px-3 py-2 border rounded-lg" id="message" rows="4"></textarea>
+                                    <textarea class="w-full px-3 py-2 border rounded-lg" id="message" name="entry.839337160" rows="4" required></textarea>
                                 </div>
                                 <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-700">
                                     <span data-lang-key="contact_send">Send Message</span>
@@ -290,6 +310,9 @@
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l-.515 1.876 1.905-.498z"/>
         </svg>
     </a>
+    
+    <!-- Hidden iframe for Google Form submission -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
     <!-- Firebase and App Logic -->
     <script type="module">
@@ -333,13 +356,23 @@
                 about_desc: "Founded with the vision to provide quality education and mentorship, Eklavya Coaching Institute has been a beacon of hope for thousands of students. Our mission is to empower students with the knowledge and skills to achieve their academic and career goals. We believe in a holistic approach to learning that goes beyond textbooks.",
                 contact_title: "Get In Touch",
                 contact_name: "Name",
-                contact_email: "Email",
+                contact_mobile: "Mobile Number",
                 contact_message: "Message",
                 contact_send: "Send Message",
                 contact_success: "Your message has been sent successfully!",
                 address_title: "Our Address",
                 address_text: "Haiderganj Bazar, Near Dhobna Chauraha<br>Ayodhya, Uttar Pradesh – 224205<br>India",
                 view_on_map: "View on Google Maps",
+                testimonials_title: "What Our Students Say",
+                testimonial_1_text: "The teachers at Eklavya are fantastic. They clear every doubt and make learning fun. My grades have improved so much!",
+                testimonial_1_name: "Rohan Sharma",
+                testimonial_1_class: "Class 10",
+                testimonial_2_text: "I used to be scared of Maths, but the personalized attention I received here helped me gain confidence. Thank you!",
+                testimonial_2_name: "Priya Singh",
+                testimonial_2_class: "Class 8",
+                testimonial_3_text: "The study material is excellent and covers everything needed for both board exams and competitive tests. Highly recommended.",
+                testimonial_3_name: "Anjali Verma",
+                testimonial_3_class: "Class 12",
                 login_title: "Student Test Login",
                 login_pin_label: "Enter Your PIN",
                 login_button: "Login to Test",
@@ -396,13 +429,23 @@
                 about_desc: "गुणवत्तापूर्ण शिक्षा और मार्गदर्शन प्रदान करने की दृष्टि से स्थापित, एकलव्य कोचिंग संस्थान हजारों छात्रों के लिए आशा की किरण रहा है। हमारा मिशन छात्रों को उनके शैक्षणिक और करियर लक्ष्यों को प्राप्त करने के लिए ज्ञान और कौशल के साथ सशक्त बनाना है। हम सीखने के लिए एक समग्र दृष्टिकोण में विश्वास करते हैं जो पाठ्यपुस्तकों से परे है।",
                 contact_title: "संपर्क करें",
                 contact_name: "नाम",
-                contact_email: "ईमेल",
+                contact_mobile: "मोबाइल नंबर",
                 contact_message: "संदेश",
                 contact_send: "संदेश भेजें",
                 contact_success: "आपका संदेश सफलतापूर्वक भेज दिया गया है!",
                 address_title: "हमारा पता",
                 address_text: "हैदरगंज बाजार, धोबना चौराहा के पास<br>अयोध्या, उत्तर प्रदेश - 224205<br>भारत",
                 view_on_map: "गूगल मैप्स पर देखें",
+                testimonials_title: "हमारे छात्र क्या कहते हैं",
+                testimonial_1_text: "एकलव्य के शिक्षक शानदार हैं। वे हर संदेह को दूर करते हैं और सीखने को मजेदार बनाते हैं। मेरे ग्रेड में बहुत सुधार हुआ है!",
+                testimonial_1_name: "रोहन शर्मा",
+                testimonial_1_class: "कक्षा 10",
+                testimonial_2_text: "मुझे पहले गणित से डर लगता था, लेकिन यहां मिले व्यक्तिगत ध्यान ने मुझे आत्मविश्वास हासिल करने में मदद की। धन्यवाद!",
+                testimonial_2_name: "प्रिया सिंह",
+                testimonial_2_class: "कक्षा 8",
+                testimonial_3_text: "अध्ययन सामग्री उत्कृष्ट है और इसमें बोर्ड परीक्षा और प्रतियोगी परीक्षाओं दोनों के लिए आवश्यक सब कुछ शामिल है। अत्यधिक अनुशंसित।",
+                testimonial_3_name: "अंजलि वर्मा",
+                testimonial_3_class: "कक्षा 12",
                 login_title: "छात्र टेस्ट लॉगिन",
                 login_pin_label: "अपना पिन दर्ज करें",
                 login_button: "टेस्ट के लिए लॉगिन करें",
@@ -542,11 +585,13 @@
         // --- Contact Form Logic ---
         const contactForm = document.getElementById('contact-form');
         contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // In a real app, you would send the data to a server here.
-            // For this demo, we'll just show a success message.
-            document.getElementById('form-fields').classList.add('hidden');
-            document.getElementById('form-success').classList.remove('hidden');
+             // We don't prevent default, allowing the form to submit to the iframe
+            
+            // Show success message after a short delay
+            setTimeout(() => {
+                document.getElementById('form-fields').classList.add('hidden');
+                document.getElementById('form-success').classList.remove('hidden');
+            }, 500);
         });
 
         // --- Login Logic ---
